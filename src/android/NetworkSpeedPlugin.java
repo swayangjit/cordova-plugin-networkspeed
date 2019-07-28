@@ -1,4 +1,4 @@
-package org.sunbird.network;
+package com.networkspeed;
 
 import android.net.TrafficStats;
 import android.util.Log;

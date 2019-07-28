@@ -8,11 +8,11 @@
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="networkspeed">
-        <param name="android-package" value="org.sunbird.network.NetworkSpeedPlugin"/>
+        <param name="android-package" value="com.networkspeed.NetworkSpeedPlugin"/>
         <param name="onload" value="true"/>
       </feature>
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"/>
-    <source-file src="src/android/NetworkSpeedPlugin.java" target-dir="src/org/sunbird/network/"/>
+    <source-file src="src/android/NetworkSpeedPlugin.java" target-dir="src/com/networkspeed/"/>
   </platform>
 </plugin>
