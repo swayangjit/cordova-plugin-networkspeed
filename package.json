@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-networkspeed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cordova plugin to get network speed(Android)",
   "cordova": {
     "id": "cordova-plugin-networkspeed",
