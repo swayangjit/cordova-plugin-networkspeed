@@ -82,9 +82,9 @@ public class NetworkSpeedPlugin extends CordovaPlugin {
 
             double speed = (double) totalSpeed / 1024;
             if (speed > 1) {
-                callbackContext.success(String.valueOf((int) speed) + " KB/s");
+                callbackContext.success(String.valueOf((int) speed));
             } else {
-                callbackContext.success(String.format(Locale.ENGLISH, "%.3f", (double) totalSpeed / 1024) + " KB/s");
+                callbackContext.success(String.format(Locale.ENGLISH, "%.3f", (double) totalSpeed / 1024));
             }
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
