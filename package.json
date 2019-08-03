@@ -2,6 +2,9 @@
   "name": "cordova-plugin-networkspeed",
   "version": "1.0.1",
   "description": "Cordova plugin to get network speed(Android)",
+  "scripts": {
+    "release": "standard-version"
+  },
   "cordova": {
     "id": "cordova-plugin-networkspeed",
     "platforms": [
@@ -21,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/swayangjit/cordova-plugin-networkspeed/issues"
   },
-  "homepage": "https://github.com/swayangjit/cordova-plugin-networkspeed#readme"
+  "homepage": "https://github.com/swayangjit/cordova-plugin-networkspeed#readme",
+  "devDependencies": {
+    "standard-version": "^7.0.0"
+  }
 }
