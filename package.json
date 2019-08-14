@@ -3,7 +3,8 @@
   "version": "1.0.2",
   "description": "Cordova plugin to get network speed(Android)",
   "scripts": {
-    "release": "standard-version"
+    "release": "standard-version",
+    "test:android": "cordova-paramedic --platform android --plugin ./"
   },
   "cordova": {
     "id": "cordova-plugin-networkspeed",
@@ -27,5 +28,8 @@
   "homepage": "https://github.com/swayangjit/cordova-plugin-networkspeed#readme",
   "devDependencies": {
     "standard-version": "^7.0.0"
+  },
+  "dependencies": {
+    "cordova-paramedic": "^0.5.0"
   }
 }
