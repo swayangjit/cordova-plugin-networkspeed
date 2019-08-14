@@ -4,7 +4,7 @@ branches:
     - develop
 env:
   global:
-    - TRAVIS_NODE_VERSION="4.2"
+    - TRAVIS_NODE_VERSION="8"
 matrix:
   include:
     - env: PLATFORM=android-7.0
