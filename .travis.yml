@@ -28,4 +28,4 @@ install:
   npm install
 
 script:
-  - node /tmp/paramedic/main.js --config pr/local/${PLATFORM} --plugin $(pwd) --verbose
+  - node /tmp/paramedic/main.js --platform=android --action=run --cleanUpAfterRun=true --verbose=true --plugin $(pwd)
