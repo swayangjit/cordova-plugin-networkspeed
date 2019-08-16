@@ -22,8 +22,11 @@ before_install:
   - node --version
   - if [[ "$PLATFORM" =~ android ]]; then gradle --version; fi
   - if [[ "$PLATFORM" =~ android ]]; then echo y | android update sdk -u --filter android-22,android-23,android-24,android-25,android-26,android-27,android-28; fi
-  - android  create avd -n emulator_name -k "system-images;android-26;default;x86_64" -g "default"
-  - emulator -avd test -no-audio -no-window
+  - sdkmanager tools
+  # Install the system image.
+  - sdkmanager "system-images;android-26;default;x86_64"
+  - echo no | avdmanager  create avd -n emulator_name -k "system-images;android-26;default;x86_64" -g "default"
+  - $ANDROID_HOME/emulator/emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
   - git clone https://github.com/apache/cordova-paramedic /tmp/paramedic && pushd /tmp/paramedic && npm install && popd
