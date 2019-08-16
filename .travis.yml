@@ -20,7 +20,7 @@ before_install:
   - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install ${TRAVIS_NODE_VERSION}
   - node --version
   - if [[ "$PLATFORM" =~ android ]]; then gradle --version; fi
-  - if [[ "$PLATFORM" =~ android ]]; then echo y | android update sdk -u --filter android-22,android-23,android-24,android-25,android-26; fi
+  - if [[ "$PLATFORM" =~ android ]]; then echo y | android update sdk -u --filter android-22,android-23,android-24,android-25,android-26,android-27,android-28; fi
   - git clone https://github.com/apache/cordova-paramedic /tmp/paramedic && pushd /tmp/paramedic && npm install && popd
   - npm install -g cordova
 
