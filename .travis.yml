@@ -28,4 +28,4 @@ install:
   npm install
 
 script:
-  - node /tmp/paramedic/main.js --config pr/${PLATFORM} --plugin $(pwd) --justbuild
+  - node /tmp/paramedic/main.js --config pr/local/${PLATFORM} --plugin $(pwd) --justbuild
