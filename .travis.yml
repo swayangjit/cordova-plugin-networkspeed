@@ -22,7 +22,7 @@ before_install:
   - node --version
   - if [[ "$PLATFORM" =~ android ]]; then gradle --version; fi
   - if [[ "$PLATFORM" =~ android ]]; then echo y | android update sdk -u --filter android-22,android-23,android-24,android-25,android-26,android-27,android-28; fi
-  - echo no | android create avd --force -n test -t $API --abi $ABI
+  - android  create avd -n emulator_name -k "system-images;android-26;default;x86_64" -g "default"
   - emulator -avd test -no-audio -no-window
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
