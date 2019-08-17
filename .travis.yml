@@ -27,7 +27,7 @@ before_install:
   - echo "d56f5187479451eabf01fb78af6dfcb131a6481e" > "$ANDROID_HOME/licenses/android-sdk-license"
   # Install the rest of tools (e.g., avdmanager).
   - echo yes | sdkmanager tools
-  - echo yes | sdkmanager "system-images;android-24;default;x86_64"
+  - echo yes | sdkmanager "system-images;android-23;google_apis;armeabi-v7a"
   - echo no | avdmanager create avd --force -n test -k "system-images;android-23;google_apis;armeabi-v7a" -c 10M
   - $ANDROID_HOME/emulator/emulator  -avd test -engine classic -no-window -no-audio -camera-back none -camera-front none -selinux permissive -qemu -m 1536 &
   - android-wait-for-emulator
