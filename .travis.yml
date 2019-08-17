@@ -45,6 +45,7 @@ install:
   - adb shell input keyevent 82 &
   - git clone https://github.com/apache/cordova-paramedic /tmp/paramedic && pushd /tmp/paramedic && npm install && popd
   - npm install -g cordova
+  - npm install
        
 # before_install:
 #   - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install ${TRAVIS_NODE_VERSION}
@@ -63,9 +64,6 @@ install:
 #   - adb shell input keyevent 82 &
 #   - git clone https://github.com/apache/cordova-paramedic /tmp/paramedic && pushd /tmp/paramedic && npm install && popd
 #   - npm install -g cordova
-
-install:
-  npm install
 
 script:
   - node /tmp/paramedic/main.js --platform=android --action=run --cleanUpAfterRun=true --verbose=true --plugin $(pwd)
