@@ -75,16 +75,15 @@ public class NetworkSpeedPlugin extends CordovaPlugin {
             mLastTime = currentTime;
 
             long totalBytes = usedRxBytes + usedTxBytes;
-            long totalSpeed = 0;
+            double totalSpeed = 0;
             if (usedTime > 0) {
-                totalSpeed = totalBytes * 1000 / usedRxBytes;
+                totalSpeed = (double) totalBytes / usedTime;
             }
 
-            double speed = (double) totalSpeed / 1024;
-            if (speed > 1) {
-                callbackContext.success(String.valueOf((int) speed));
+            if (totalSpeed > 1) {
+                callbackContext.success(String.valueOf((int)totalSpeed));
             } else {
-                callbackContext.success(String.format(Locale.ENGLISH, "%.3f", (double) totalSpeed / 1024));
+                callbackContext.success(String.format(Locale.ENGLISH, "%.3f", totalSpeed));
             }
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
