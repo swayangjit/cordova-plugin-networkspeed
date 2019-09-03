@@ -81,7 +81,7 @@ public class NetworkSpeedPlugin extends CordovaPlugin {
             }
 
             if (totalSpeed > 1) {
-                callbackContext.success(String.valueOf(totalSpeed));
+                callbackContext.success(String.valueOf((int)totalSpeed));
             } else {
                 callbackContext.success(String.format(Locale.ENGLISH, "%.3f", totalSpeed));
             }
