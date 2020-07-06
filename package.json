@@ -15,7 +15,9 @@
     "type": "git",
     "url": "git+https://github.com/swayangjit/cordova-plugin-networkspeed.git"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "ecosystem:cordova",
     "cordova-android"
@@ -27,6 +29,6 @@
   },
   "homepage": "https://github.com/swayangjit/cordova-plugin-networkspeed#readme",
   "devDependencies": {
-    "standard-version": "^7.0.0"
+    "standard-version": "^8.0.0"
   }
 }
