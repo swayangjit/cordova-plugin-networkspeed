@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/swayangjit/cordova-plugin-networkspeed#readme",
   "devDependencies": {
-    "standard-version": "^8.0.0"
+    "standard-version": "^8.0.1"
   }
 }
